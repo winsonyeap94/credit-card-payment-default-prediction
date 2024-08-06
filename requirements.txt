@@ -6,7 +6,7 @@ kedro-viz==9.2.0
 kedro==0.19.7
 notebook
 numpy==2.0.1
-pandas=2.2.2
+pandas==2.2.2
 ruff~=0.1.8
 scikit-learn==1.5.1
 seaborn~=0.12.1
