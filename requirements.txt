@@ -1,0 +1,12 @@
+ipython>=8.10
+jupyterlab>=3.0
+kedro-datasets[pandas-csvdataset, pandas-exceldataset, pandas-parquetdataset, plotly-plotlydataset, plotly-jsondataset, matplotlib-matplotlibwriter]>=3.0; python_version >= "3.9"
+kedro-datasets[pandas.CSVDataset, pandas.ExcelDataset, pandas.ParquetDataset, plotly.PlotlyDataset, plotly.JSONDataset, matplotlib.MatplotlibWriter]>=1.0; python_version < "3.9"
+kedro-viz==9.2.0
+kedro==0.19.7
+notebook
+numpy==2.0.1
+pandas=2.2.2
+ruff~=0.1.8
+scikit-learn==1.5.1
+seaborn~=0.12.1

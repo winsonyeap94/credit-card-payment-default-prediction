@@ -1,0 +1,40 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "credit_card_payment_default_prediction"
+readme = "README.md"
+dynamic = [ "dependencies", "version",]
+
+[project.scripts]
+credit-card-payment-default-prediction = "credit_card_payment_default_prediction.__main__:main"
+
+[tool.kedro]
+package_name = "credit_card_payment_default_prediction"
+project_name = "Credit Card Payment Default Prediction"
+kedro_init_version = "0.19.7"
+tools = [ "Linting", "Custom Logging", "Data Structure", "Kedro Viz",]
+example_pipeline = "True"
+source_dir = "src"
+
+[tool.ruff]
+line-length = 88
+show-fixes = true
+select = [ "F", "W", "E", "I", "UP", "PL", "T201",]
+ignore = [ "E501",]
+
+[project.entry-points."kedro.hooks"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.setuptools.dynamic.dependencies]
+file = "requirements.txt"
+
+[tool.setuptools.dynamic.version]
+attr = "credit_card_payment_default_prediction.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
+namespaces = false
